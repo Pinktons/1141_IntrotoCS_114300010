@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentID_Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        table {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+        .header-row {
+            background-color: #76a9ad;
+            color: white;
+        }
+        .section-header {
+            background-color: #e9ecef;
+            font-weight: bold;
+        }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .music-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .music-item {
+            text-align: center;
+            width: 120px;
+        }
+        .music-item img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .profile-img {
+            width: 120px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .school-logo {
+            width: 100px;
+            height: auto;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        
+        <tr class="header-row">
+            <th colspan="4">
+                <h1>Welcome to PHAM VAN HONG TAN Personal Portfolio</h1>
+            </th>
+        </tr>
+        
+       
+        <tr>
+            <td rowspan="4">
+               <img src="MY PICTURE.jpg" alt="Profile Picture of HONG TAN" width="150" height="150">
+
+            </td>
+            <td><strong>Name</strong></td>
+            <td colspan="2">PHAM VAN HONG TAN</td>
+        </tr>
+        <tr>
+            <td><strong>Student ID</strong></td>
+            <td colspan="2">114300010</td>
+        </tr>
+        <tr>
+            <td><strong>Department</strong></td>
+            <td colspan="2">College</td>
+        </tr>
+        <tr>
+            <td><strong>Academic year</strong></td>
+            <td colspan="2">3</td>
+        </tr>
+        
+        <!-- Requirement #3: Learning History -->
+        <tr class="section-header">
+            <td colspan="4">Course taken</td>
+        </tr>
+        <tr>
+            <td><strong>Programming language</strong></td>
+            <td colspan="3">
+                <ul>
+                    <li>Python programming</li>
+                    <li>Introduction to HTML </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Course Projects</strong></td>
+            <td colspan="3">
+                <ul>
+                    <li>AI-Based Preservation of NCCU historical sites</li>
+                    <li>AI Oral history and emotional connection platform</li>
+                </ul>
+            </td>
+        </tr>
+        
+        <!-- Requirement #4: Portfolio -->
+        <tr class="section-header">
+            <td colspan="4">Portfolio</td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <strong>Assigments links:</strong>
+                <ul>
+                    <li><a href="https://github.com/Pinktons/1141_IntrotoCS_114300010/tree/main/HW1_Github">HW1_Github</a></li>
+                    <li><a href="https://github.com/Pinktons/1141_IntrotoCS_114300010/tree/main/HW2_DeepDreamGenerator">HW2_DeepDreamGenerator</a></li>
+                    <li><a href="https://github.com/Pinktons/1141_IntrotoCS_114300010/tree/main/HW4_Excel2">HW4_Excell</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <strong>Favourite musics:</strong>
+                <div class="music-container">
+                    <div class="music-item">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                            <img src="RR.jpg" alt="Rick roll">
+                        </a>
+                        <div>Never gonna...</div>
+                    </div>
+                    <div class="music-item">
+                        <a href="https://www.youtube.com/watch?v=DA5yszLDDD8&list=PLqcJ4rOTJQrBo3fPCc6ial8n5VLxtb-zZ&index=1">
+                            <img src="Armor hero.jpg" alt="My chilhood">
+                        </a>
+                        <div>Armor Hero</div>
+                    </div>
+                    <div class="music-item">
+                        <a href="https://www.youtube.com/watch?v=DK2NApUxbLY&list=RDDK2NApUxbLY&start_radio=1">
+                            <img src="Mệnh lệnh hoa hồng.jpg" alt=" My favourite Vietnam  ">
+                        </a>
+                        <div>Mệnh lệnh hoa hồng</div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- Requirement #5: Contact Information -->
+        <tr class="section-header">
+            <td colspan="4">Contact Information</td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <strong>Email:</strong> 
+                <a href="mailto:hongtanbt123@gmail.com">hongtanbt123@gmail.com</a>
+            </td>
+            <td>
+                <img src="NCCU_LOGO.jpg" alt="School Logo" class="school-logo">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
