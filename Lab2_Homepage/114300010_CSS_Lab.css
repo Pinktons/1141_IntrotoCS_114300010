@@ -1,0 +1,124 @@
+
+
+
+body {
+    color: black;
+    background-color: lightgray;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+     background-color: lightskyblue;   
+        margin: 0;                   
+    padding: 20px 0;             
+    text-align: center;
+    width: 100%;                 
+    display: block;
+}
+h2 {background-color: lightskyblue;   
+        margin: 0;                   
+    padding: 20px 0;             
+    text-align: center;
+    width: 100%;                 
+    display: block;}
+
+
+.navibar {
+    position: relative;
+    top: 1em;
+    left: 1em;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 2em 0;
+    background-color: black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navibar li {
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.navibar li:hover {
+    background-color: dodgerblue;
+}
+
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+    border-radius: 0 0 5px 5px;
+    z-index: 1;
+}
+
+.navibar li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    padding: 10px;
+    border-bottom: 1px solid dodgerblue;
+    color : 
+}
+
+.dropdown li:last-child {
+    border-bottom: none;
+}
+
+.dropdown li:hover {
+    background-color: dodgerblue;
+}
+
+/* Content styles */
+.Contents {
+    display: flex;
+    margin-top: 4em;
+}
+
+.Main-contents {
+    flex: 2;
+    padding-right: 20px;
+}
+
+
+
+
+
+@media all {
+ 
+    body {
+        font-size: 16px;
+    }
+}
+
+@media print {
+    /* Styles for print media */
+    body {
+        color: black;
+        background-color: white;
+        font-size: 12pt;
+    }
+    
+    .navibar, .services {
+        display: none;
+    }
+    
+    h1 {
+        color: black;
+    }
+}
