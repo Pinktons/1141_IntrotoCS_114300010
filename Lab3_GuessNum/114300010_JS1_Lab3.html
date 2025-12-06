@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>StudentID_Number Guessing Game</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #image img { max-width: 300px; display:block; margin-top:10px; }
+    #startBtn { padding:8px 14px; font-size:16px; }
+  </style>
+</head>
+<body>
+  <h1>114300010_Number Guessing Game</h1>
+
+  <p>
+    Click the button below to start the game.<br>
+    Guess the number between <strong>1 - 100</strong>.<br>
+    You have <strong>7 attempts</strong>.
+  </p>
+
+  <button id="startBtn">Start Game</button>
+
+
+  <div id="image"></div>
+
+  <script>
+    (function() {
+      const startBtn = document.getElementById('startBtn');
+      const imageDiv = document.getElementById('image');
+
+      function startGame() {
+        imageDiv.innerHTML = ''; 
+        const answer = Math.floor(Math.random() * 100) + 1; 
+        let min = 1;
+        let max = 100;
+        let chances = 7;
+
+        while (chances > 0) {
+          const promptText =
+            `Current range: ${min} - ${max}\nAttempts left: ${chances}\nEnter a number (1-100):`;
+
+          const input = window.prompt(promptText);
+
+          if (input === null) {
+            alert('Game cancelled.');
+            return;
+          }
+
+          const trimmed = input.trim();
+
+          if (trimmed === '' || isNaN(trimmed)) {
+            alert('Invalid input. Please enter a number.');
+            continue;
+          }
+
+          const guess = Number(trimmed);
+
+          if (!Number.isInteger(guess) || guess < 1 || guess > 100) {
+            alert('Please enter an integer between 1 and 100.');
+            continue;
+          }
+
+          chances--;
+
+          if (guess === answer) {
+            alert(`Congratulations! You guessed the correct number: ${answer}`);
+            imageDiv.innerHTML = '<img src="images/correct.jpg" alt="correct">';
+            return;
+          } 
+          else {
+            if (guess < answer) {
+              min = Math.max(min, guess + 1);
+              alert(`Wrong guess. The number is HIGHER than ${guess}.`);
+            } else {
+              max = Math.min(max, guess - 1);
+              alert(`Wrong guess. The number is LOWER than ${guess}.`);
+            }
+
+            if (chances === 0) {
+              alert(`Out of attempts! The correct answer was: ${answer}`);
+              imageDiv.innerHTML = '<img src="images/wrong.jpg" alt="wrong">';
+              return;
+            }
+          }
+        }
+      }
+
+      startBtn.addEventListener('click', startGame);
+    })();
+  </script>
+</body>
+</html>
